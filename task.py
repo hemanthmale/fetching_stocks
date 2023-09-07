@@ -20,7 +20,6 @@ for timestamp, record in first_20_records.items():
     date,time=timestamp.split()
     record_dict = {'Date':date,"Time":time,"Open": record["1. open"],"High": record["2. high"],"Low": record["3. low"],"Close": record["4. close"],"Volume": record["5. volume"]}
     records.append(record_dict)
-#print(records)
 # Converting the list of dictionaries to a DataFrame
 df = pd.DataFrame(records)
 # Save the data to an Excel file
